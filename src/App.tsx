@@ -25,6 +25,8 @@ function App() {
   }
 
   async function createUsers(){
+    event?.preventDefault();
+
     await api.post('/usuarios', {
       name: inputName.current?.value || '',
       email: inputEmail.current?.value || '',
